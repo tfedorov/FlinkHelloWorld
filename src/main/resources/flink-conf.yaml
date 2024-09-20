@@ -1,0 +1,4 @@
+jobmanager.rpc.address: localhost
+taskmanager.numberOfTaskSlots: 4
+parallelism.default: 1
+execution.target: local
