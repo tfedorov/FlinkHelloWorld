@@ -1,32 +1,24 @@
 package com.tfedorov;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
-import org.apache.flink.api.java.io.TextInputFormat;
 import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.core.fs.Path;
-import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
+import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
 
-public class FlinkHelloWorldApp {
+public class FlinkConnectionApp {
 
     public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        String filePath = "/Users/tfedorov/IdeaProjects/FlinkHelloWorld/src/main/resources/files2read/test.csv";
-        TextInputFormat inputFormat = new TextInputFormat(new Path(filePath)
-                // Path to the file
-        );
-
-        SingleOutputStreamOperator<Tuple2<String, Integer>> dataStream = env
-//                .socketTextStream("localhost", 9999)
-                .readFile(inputFormat, filePath)
+        DataStream<Tuple2<String, Integer>> dataStream = env
+                .socketTextStream("localhost", 9999)
                 .flatMap(new Splitter())
                 .keyBy(value -> value.f0)
-//                .window(TumblingProcessingTimeWindows.of(Time.seconds(5)))
+                .window(TumblingProcessingTimeWindows.of(Time.seconds(5)))
                 .sum(1);
 
         dataStream.print();
@@ -38,7 +30,6 @@ public class FlinkHelloWorldApp {
         @Override
         public void flatMap(String sentence, Collector<Tuple2<String, Integer>> out) throws Exception {
             for (String word : sentence.split(" ")) {
-                System.out.println("sentence = " + sentence + ", out = " + word);
                 out.collect(new Tuple2<String, Integer>(word, 1));
             }
         }

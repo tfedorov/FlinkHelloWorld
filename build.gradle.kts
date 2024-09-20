@@ -19,10 +19,8 @@ repositories {
 
 dependencies {
     implementation("org.apache.flink:flink-java:1.9.3")
-    implementation("org.apache.flink:flink-clients_2.12:1.9.3")
     implementation("org.apache.flink:flink-connector-wikiedits_2.12:1.9.3")
     implementation("org.apache.flink:flink-core:1.9.3")
-    implementation("org.apache.flink:flink-streaming-java_2.12:1.9.3")
 }
 application {
     // Replace this with your main class name
