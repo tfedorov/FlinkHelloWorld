@@ -21,9 +21,8 @@ dependencies {
     implementation("org.apache.flink:flink-java:1.9.3")
 //    implementation("org.apache.flink:flink-streaming-java:1.+")
     implementation("org.apache.flink:flink-connector-wikiedits_2.12:1.9.3")
-    implementation("org.apache.flink:flink-core:1.9.3")
 
-    testImplementation("org.apache.flink:flink-test-utils:1.+")
+    testImplementation("org.apache.flink:flink-test-utils:1.20.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")    // Adding JUnit Jupiter API for writing unit tests
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")    // Adding JUnit Jupiter Engine for running tests

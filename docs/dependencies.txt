@@ -1,0 +1,820 @@
+
+> Task :dependencies
+
+------------------------------------------------------------
+Root project 'FlinkHelloWorld'
+------------------------------------------------------------
+
+annotationProcessor - Annotation processors and their dependencies for source set 'main'.
+No dependencies
+
+compileClasspath - Compile classpath for source set 'main'.
++--- org.apache.flink:flink-java:1.9.3
+|    +--- org.apache.flink:flink-core:1.9.3
+|    |    +--- org.apache.flink:flink-annotations:1.9.3
+|    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+|    |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-metrics-core:1.9.3
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+|    |    +--- org.apache.commons:commons-lang3:3.3.2
+|    |    +--- com.esotericsoftware.kryo:kryo:2.24.0
+|    |    |    +--- com.esotericsoftware.minlog:minlog:1.2
+|    |    |    \--- org.objenesis:objenesis:2.1
+|    |    +--- commons-collections:commons-collections:3.2.2
+|    |    +--- org.apache.commons:commons-compress:1.18
+|    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+|    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+|    |    +--- com.google.code.findbugs:jsr305:1.3.9
+|    |    \--- org.apache.flink:force-shading:1.9.3
+|    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+|    +--- org.apache.commons:commons-lang3:3.3.2
+|    +--- org.apache.commons:commons-math3:3.5
+|    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+|    +--- com.google.code.findbugs:jsr305:1.3.9
+|    \--- org.apache.flink:force-shading:1.9.3
+\--- org.apache.flink:flink-connector-wikiedits_2.12:1.9.3
+     +--- org.apache.flink:flink-streaming-java_2.12:1.9.3
+     |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    +--- org.apache.flink:flink-runtime_2.12:1.9.3
+     |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-java:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-queryable-state-client-java:1.9.3
+     |    |    |    +--- org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0
+     |    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    |    +--- org.apache.flink:flink-hadoop-fs:1.9.3
+     |    |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    |    +--- commons-io:commons-io:2.4
+     |    |    +--- org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0
+     |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    |    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+     |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0
+     |    |    +--- org.apache.commons:commons-lang3:3.3.2
+     |    |    +--- commons-cli:commons-cli:1.3.1
+     |    |    +--- org.javassist:javassist:3.19.0-GA
+     |    |    +--- org.scala-lang:scala-library:2.12.7
+     |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21
+     |    |    |    +--- com.typesafe:config:1.3.3
+     |    |    |    \--- org.scala-lang.modules:scala-java8-compat_2.12:0.8.0
+     |    |    +--- com.typesafe.akka:akka-stream_2.12:2.5.21
+     |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+     |    |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+     |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
+     |    |    |    \--- com.typesafe:ssl-config-core_2.12:0.3.7
+     |    |    |         \--- org.scala-lang.modules:scala-parser-combinators_2.12:1.1.1
+     |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+     |    |    +--- com.typesafe.akka:akka-slf4j_2.12:2.5.21
+     |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.25
+     |    |    +--- org.clapper:grizzled-slf4j_2.12:1.3.2
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.25
+     |    |    +--- com.github.scopt:scopt_2.12:3.5.0
+     |    |    +--- org.xerial.snappy:snappy-java:1.1.4
+     |    |    +--- com.twitter:chill_2.12:0.7.6
+     |    |    |    \--- com.twitter:chill-java:0.7.6
+     |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    +--- org.apache.flink:flink-clients_2.12:1.9.3
+     |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-optimizer_2.12:1.9.3
+     |    |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+     |    |    |    +--- org.apache.flink:flink-java:1.9.3 (*)
+     |    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0
+     |    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    |    +--- org.apache.flink:flink-java:1.9.3 (*)
+     |    |    +--- commons-cli:commons-cli:1.3.1
+     |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    +--- org.apache.commons:commons-math3:3.5
+     |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    \--- org.apache.flink:force-shading:1.9.3
+     +--- org.schwering:irclib:1.10
+     +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     +--- com.google.code.findbugs:jsr305:1.3.9
+     \--- org.apache.flink:force-shading:1.9.3
+
+compileOnly - Compile-only dependencies for the 'main' feature. (n)
+No dependencies
+
+default - Configuration for default artifacts. (n)
+No dependencies
+
+implementation - Implementation dependencies for the 'main' feature. (n)
++--- org.apache.flink:flink-java:1.9.3 (n)
+\--- org.apache.flink:flink-connector-wikiedits_2.12:1.9.3 (n)
+
+mainSourceElements - List of source directories contained in the Main SourceSet. (n)
+No dependencies
+
+runtimeClasspath - Runtime classpath of source set 'main'.
++--- org.apache.flink:flink-java:1.9.3
+|    +--- org.apache.flink:flink-core:1.9.3
+|    |    +--- org.apache.flink:flink-annotations:1.9.3
+|    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+|    |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-metrics-core:1.9.3
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+|    |    +--- org.apache.commons:commons-lang3:3.3.2
+|    |    +--- com.esotericsoftware.kryo:kryo:2.24.0
+|    |    |    +--- com.esotericsoftware.minlog:minlog:1.2
+|    |    |    \--- org.objenesis:objenesis:2.1
+|    |    +--- commons-collections:commons-collections:3.2.2
+|    |    +--- org.apache.commons:commons-compress:1.18
+|    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+|    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+|    |    +--- com.google.code.findbugs:jsr305:1.3.9
+|    |    \--- org.apache.flink:force-shading:1.9.3
+|    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+|    +--- org.apache.commons:commons-lang3:3.3.2
+|    +--- org.apache.commons:commons-math3:3.5
+|    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+|    +--- com.google.code.findbugs:jsr305:1.3.9
+|    \--- org.apache.flink:force-shading:1.9.3
+\--- org.apache.flink:flink-connector-wikiedits_2.12:1.9.3
+     +--- org.apache.flink:flink-streaming-java_2.12:1.9.3
+     |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    +--- org.apache.flink:flink-runtime_2.12:1.9.3
+     |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-java:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-queryable-state-client-java:1.9.3
+     |    |    |    +--- org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0
+     |    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    |    +--- org.apache.flink:flink-hadoop-fs:1.9.3
+     |    |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    |    +--- commons-io:commons-io:2.4
+     |    |    +--- org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0
+     |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    |    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+     |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0
+     |    |    +--- org.apache.commons:commons-lang3:3.3.2
+     |    |    +--- commons-cli:commons-cli:1.3.1
+     |    |    +--- org.javassist:javassist:3.19.0-GA
+     |    |    +--- org.scala-lang:scala-library:2.12.7
+     |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21
+     |    |    |    +--- com.typesafe:config:1.3.3
+     |    |    |    \--- org.scala-lang.modules:scala-java8-compat_2.12:0.8.0
+     |    |    +--- com.typesafe.akka:akka-stream_2.12:2.5.21
+     |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+     |    |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+     |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
+     |    |    |    \--- com.typesafe:ssl-config-core_2.12:0.3.7
+     |    |    |         \--- org.scala-lang.modules:scala-parser-combinators_2.12:1.1.1
+     |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+     |    |    +--- com.typesafe.akka:akka-slf4j_2.12:2.5.21
+     |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.25
+     |    |    +--- org.clapper:grizzled-slf4j_2.12:1.3.2
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.25
+     |    |    +--- com.github.scopt:scopt_2.12:3.5.0
+     |    |    +--- org.xerial.snappy:snappy-java:1.1.4
+     |    |    +--- com.twitter:chill_2.12:0.7.6
+     |    |    |    \--- com.twitter:chill-java:0.7.6
+     |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    +--- org.apache.flink:flink-clients_2.12:1.9.3
+     |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+     |    |    +--- org.apache.flink:flink-optimizer_2.12:1.9.3
+     |    |    |    +--- org.apache.flink:flink-core:1.9.3 (*)
+     |    |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+     |    |    |    +--- org.apache.flink:flink-java:1.9.3 (*)
+     |    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0
+     |    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    |    +--- org.apache.flink:flink-java:1.9.3 (*)
+     |    |    +--- commons-cli:commons-cli:1.3.1
+     |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    \--- org.apache.flink:force-shading:1.9.3
+     |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0
+     |    +--- org.apache.commons:commons-math3:3.5
+     |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    \--- org.apache.flink:force-shading:1.9.3
+     +--- org.schwering:irclib:1.10
+     +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.25
+     +--- com.google.code.findbugs:jsr305:1.3.9
+     \--- org.apache.flink:force-shading:1.9.3
+
+runtimeElements - Runtime elements for the 'main' feature. (n)
+No dependencies
+
+runtimeOnly - Runtime-only dependencies for the 'main' feature. (n)
+No dependencies
+
+shadow
+No dependencies
+
+shadowRuntimeElements (n)
+No dependencies
+
+testAnnotationProcessor - Annotation processors and their dependencies for source set 'test'.
+No dependencies
+
+testCompileClasspath - Compile classpath for source set 'test'.
++--- org.apache.flink:flink-java:1.9.3 -> 1.20.0
+|    +--- org.apache.flink:flink-core:1.20.0
+|    |    +--- org.apache.flink:flink-core-api:1.20.0
+|    |    |    +--- org.apache.flink:flink-annotations:1.20.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    +--- org.apache.flink:flink-metrics-core:1.20.0
+|    |    |    |    \--- org.apache.flink:flink-annotations:1.20.0 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-annotations:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-shaded-asm-9:9.5-17.0
+|    |    +--- org.apache.flink:flink-shaded-jackson:2.14.2-17.0
+|    |    +--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    |    +--- org.snakeyaml:snakeyaml-engine:2.6
+|    |    +--- org.apache.commons:commons-text:1.10.0
+|    |    |    \--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    |    +--- com.esotericsoftware.kryo:kryo:2.24.0
+|    |    |    +--- com.esotericsoftware.minlog:minlog:1.2
+|    |    |    \--- org.objenesis:objenesis:2.1
+|    |    +--- commons-collections:commons-collections:3.2.2
+|    |    +--- org.apache.commons:commons-compress:1.26.0
+|    |    |    +--- commons-io:commons-io:2.15.1
+|    |    |    \--- org.apache.commons:commons-lang3:3.14.0
+|    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    +--- org.apache.commons:commons-math3:3.6.1
+|    +--- com.twitter:chill-java:0.7.6
+|    |    \--- com.esotericsoftware.kryo:kryo:2.21 -> 2.24.0 (*)
+|    +--- org.slf4j:slf4j-api:1.7.36
+|    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
++--- org.apache.flink:flink-connector-wikiedits_2.12:1.9.3
+|    +--- org.apache.flink:flink-streaming-java_2.12:1.9.3
+|    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3
+|    |    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-java:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-queryable-state-client-java:1.9.3 -> 1.20.0
+|    |    |    |    +--- org.apache.flink:flink-shaded-netty:4.1.91.Final-17.0
+|    |    |    |    \--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.apache.flink:flink-hadoop-fs:1.9.3 -> 1.20.0
+|    |    |    |    \--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- commons-io:commons-io:2.4 -> 2.15.1
+|    |    |    +--- org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0 -> 4.1.91.Final-17.0
+|    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0 -> 31.1-jre-17.0
+|    |    |    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+|    |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0 -> 2.14.2-17.0
+|    |    |    +--- org.apache.commons:commons-lang3:3.3.2 -> 3.14.0
+|    |    |    +--- commons-cli:commons-cli:1.3.1 -> 1.5.0
+|    |    |    +--- org.javassist:javassist:3.19.0-GA -> 3.24.0-GA
+|    |    |    +--- org.scala-lang:scala-library:2.12.7
+|    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21
+|    |    |    |    +--- com.typesafe:config:1.3.3
+|    |    |    |    \--- org.scala-lang.modules:scala-java8-compat_2.12:0.8.0
+|    |    |    +--- com.typesafe.akka:akka-stream_2.12:2.5.21
+|    |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+|    |    |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+|    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
+|    |    |    |    \--- com.typesafe:ssl-config-core_2.12:0.3.7
+|    |    |    |         \--- org.scala-lang.modules:scala-parser-combinators_2.12:1.1.1
+|    |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+|    |    |    +--- com.typesafe.akka:akka-slf4j_2.12:2.5.21
+|    |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.36
+|    |    |    +--- org.clapper:grizzled-slf4j_2.12:1.3.2
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.36
+|    |    |    +--- com.github.scopt:scopt_2.12:3.5.0
+|    |    |    +--- org.xerial.snappy:snappy-java:1.1.4 -> 1.1.10.4
+|    |    |    +--- com.twitter:chill_2.12:0.7.6
+|    |    |    |    \--- com.twitter:chill-java:0.7.6 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-clients_2.12:1.9.3
+|    |    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+|    |    |    +--- org.apache.flink:flink-optimizer_2.12:1.9.3
+|    |    |    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+|    |    |    |    +--- org.apache.flink:flink-java:1.9.3 -> 1.20.0 (*)
+|    |    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0 -> 31.1-jre-17.0
+|    |    |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0 -> 2.14.2-17.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    |    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    |    +--- org.apache.flink:flink-java:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- commons-cli:commons-cli:1.3.1 -> 1.5.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0 -> 31.1-jre-17.0
+|    |    +--- org.apache.commons:commons-math3:3.5 -> 3.6.1
+|    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    \--- org.apache.flink:force-shading:1.9.3
+|    +--- org.schwering:irclib:1.10
+|    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    \--- org.apache.flink:force-shading:1.9.3
++--- org.apache.flink:flink-test-utils:1.20.0
+|    +--- org.apache.flink:flink-table-common:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-shaded-asm-9:9.5-17.0
+|    |    +--- com.ibm.icu:icu4j:67.1
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-test-utils-junit:1.20.0
+|    |    +--- org.junit.jupiter:junit-jupiter:5.10.1
+|    |    |    +--- org.junit:junit-bom:5.10.1
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter:5.10.1 (c)
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter-api:5.10.1 (c)
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter-params:5.10.1 (c)
+|    |    |    |    +--- org.junit.platform:junit-platform-engine:1.10.1 (c)
+|    |    |    |    +--- org.junit.vintage:junit-vintage-engine:5.10.1 (c)
+|    |    |    |    \--- org.junit.platform:junit-platform-commons:1.10.1 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-api:5.10.1
+|    |    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    |    +--- org.opentest4j:opentest4j:1.3.0
+|    |    |    |    +--- org.junit.platform:junit-platform-commons:1.10.1
+|    |    |    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    |    |    \--- org.apiguardian:apiguardian-api:1.1.2
+|    |    |    |    \--- org.apiguardian:apiguardian-api:1.1.2
+|    |    |    \--- org.junit.jupiter:junit-jupiter-params:5.10.1
+|    |    |         +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |         +--- org.junit.jupiter:junit-jupiter-api:5.10.1 (*)
+|    |    |         \--- org.apiguardian:apiguardian-api:1.1.2
+|    |    +--- org.junit.vintage:junit-vintage-engine:5.10.1
+|    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    +--- org.junit.platform:junit-platform-engine:1.10.1
+|    |    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    |    +--- org.opentest4j:opentest4j:1.3.0
+|    |    |    |    +--- org.junit.platform:junit-platform-commons:1.10.1 (*)
+|    |    |    |    \--- org.apiguardian:apiguardian-api:1.1.2
+|    |    |    +--- junit:junit:4.13.2
+|    |    |    |    \--- org.hamcrest:hamcrest-core:1.3
+|    |    |    \--- org.apiguardian:apiguardian-api:1.1.2
+|    |    +--- org.assertj:assertj-core:3.23.1
+|    |    |    \--- net.bytebuddy:byte-buddy:1.12.10
+|    |    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.17.1
+|    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.36
+|    |    |    \--- org.apache.logging.log4j:log4j-api:2.17.1
+|    |    +--- org.apache.logging.log4j:log4j-api:2.17.1
+|    |    +--- org.apache.logging.log4j:log4j-core:2.17.1
+|    |    |    \--- org.apache.logging.log4j:log4j-api:2.17.1
+|    |    +--- org.testcontainers:testcontainers:1.19.1
+|    |    |    +--- junit:junit:4.13.2 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    +--- org.apache.commons:commons-compress:1.24.0 -> 1.26.0 (*)
+|    |    |    +--- org.rnorth.duct-tape:duct-tape:1.0.8
+|    |    |    |    \--- org.jetbrains:annotations:17.0.0
+|    |    |    +--- com.github.docker-java:docker-java-api:3.3.3
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.10.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.30 -> 1.7.36
+|    |    |    \--- com.github.docker-java:docker-java-transport-zerodep:3.3.3
+|    |    |         +--- com.github.docker-java:docker-java-transport:3.3.3
+|    |    |         +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.36
+|    |    |         \--- net.java.dev.jna:jna:5.12.1
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-runtime:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-rpc-core:1.20.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-rpc-akka-loader:1.20.0
+|    |    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-rpc-core:1.20.0 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-queryable-state-client-java:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-hadoop-fs:1.20.0 (*)
+|    |    +--- commons-io:commons-io:2.15.1
+|    |    +--- org.apache.flink:flink-shaded-netty:4.1.91.Final-17.0
+|    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    +--- org.apache.flink:flink-shaded-jackson:2.14.2-17.0
+|    |    +--- org.apache.flink:flink-shaded-zookeeper-3:3.7.1-17.0
+|    |    +--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    |    +--- org.apache.commons:commons-text:1.10.0 (*)
+|    |    +--- commons-cli:commons-cli:1.5.0
+|    |    +--- org.javassist:javassist:3.24.0-GA
+|    |    +--- org.xerial.snappy:snappy-java:1.1.10.4
+|    |    +--- tools.profiler:async-profiler:2.9
+|    |    +--- org.lz4:lz4-java:1.8.0
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    +--- org.apache.flink:flink-rpc-akka-loader:1.20.0 (*)
+|    +--- org.apache.flink:flink-clients:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-optimizer:1.20.0
+|    |    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.apache.flink:flink-shaded-jackson:2.14.2-17.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    +--- commons-cli:commons-cli:1.5.0
+|    |    +--- org.apache.flink:flink-streaming-java:1.20.0
+|    |    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-file-sink-common:1.20.0
+|    |    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.apache.commons:commons-math3:3.6.1
+|    |    |    +--- org.apache.flink:flink-connector-datagen:1.20.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-datastream:1.20.0
+|    |    |    +--- org.apache.flink:flink-datastream-api:1.20.0
+|    |    |    |    +--- org.apache.flink:flink-core-api:1.20.0 (*)
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    +--- org.apache.flink:flink-streaming-java:1.20.0 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-streaming-java:1.20.0 (*)
+|    +--- org.junit.jupiter:junit-jupiter:5.10.1 (*)
+|    +--- org.assertj:assertj-core:3.23.1 (*)
+|    +--- org.apache.curator:curator-test:5.4.0
+|    |    +--- org.apache.zookeeper:zookeeper:3.7.1
+|    |    |    +--- org.apache.zookeeper:zookeeper-jute:3.7.1
+|    |    |    |    \--- org.apache.yetus:audience-annotations:0.12.0
+|    |    |    +--- org.apache.yetus:audience-annotations:0.12.0
+|    |    |    +--- io.netty:netty-handler:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-resolver:4.1.76.Final
+|    |    |    |    |    \--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final
+|    |    |    |    |    \--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-transport:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |    |    \--- io.netty:netty-resolver:4.1.76.Final (*)
+|    |    |    |    \--- io.netty:netty-codec:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |         \--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    +--- io.netty:netty-transport-native-epoll:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |    +--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    |    +--- io.netty:netty-transport-native-unix-common:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |    |    \--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    |    \--- io.netty:netty-transport-classes-epoll:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |         +--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    |         \--- io.netty:netty-transport-native-unix-common:4.1.76.Final (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.35 -> 1.7.36
+|    |    +--- io.dropwizard.metrics:metrics-core:3.2.5
+|    |    +--- org.xerial.snappy:snappy-java:1.1.7 -> 1.1.10.4
+|    |    +--- com.google.guava:guava:31.1-jre
+|    |    |    +--- com.google.guava:failureaccess:1.0.1
+|    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    |    +--- org.checkerframework:checker-qual:3.12.0
+|    |    |    +--- com.google.errorprone:error_prone_annotations:2.11.0
+|    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|    |    \--- org.junit.jupiter:junit-jupiter-api:5.6.2 -> 5.10.1 (*)
+|    +--- org.slf4j:slf4j-api:1.7.36
+|    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+\--- org.junit.jupiter:junit-jupiter-api:5.8.1 -> 5.10.1 (*)
+
+testCompileOnly - Compile only dependencies for source set 'test'. (n)
+No dependencies
+
+testImplementation - Implementation only dependencies for source set 'test'. (n)
++--- org.apache.flink:flink-test-utils:1.20.0 (n)
+\--- org.junit.jupiter:junit-jupiter-api:5.8.1 (n)
+
+testRuntimeClasspath - Runtime classpath of source set 'test'.
++--- org.apache.flink:flink-java:1.9.3 -> 1.20.0
+|    +--- org.apache.flink:flink-core:1.20.0
+|    |    +--- org.apache.flink:flink-core-api:1.20.0
+|    |    |    +--- org.apache.flink:flink-annotations:1.20.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    +--- org.apache.flink:flink-metrics-core:1.20.0
+|    |    |    |    \--- org.apache.flink:flink-annotations:1.20.0 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-annotations:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-shaded-asm-9:9.5-17.0
+|    |    +--- org.apache.flink:flink-shaded-jackson:2.14.2-17.0
+|    |    +--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    |    +--- org.snakeyaml:snakeyaml-engine:2.6
+|    |    +--- org.apache.commons:commons-text:1.10.0
+|    |    |    \--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    |    +--- com.esotericsoftware.kryo:kryo:2.24.0
+|    |    |    +--- com.esotericsoftware.minlog:minlog:1.2
+|    |    |    \--- org.objenesis:objenesis:2.1
+|    |    +--- commons-collections:commons-collections:3.2.2
+|    |    +--- org.apache.commons:commons-compress:1.26.0
+|    |    |    +--- commons-io:commons-io:2.15.1
+|    |    |    \--- org.apache.commons:commons-lang3:3.14.0
+|    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    +--- org.apache.commons:commons-math3:3.6.1
+|    +--- com.twitter:chill-java:0.7.6
+|    |    \--- com.esotericsoftware.kryo:kryo:2.21 -> 2.24.0 (*)
+|    +--- org.slf4j:slf4j-api:1.7.36
+|    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
++--- org.apache.flink:flink-connector-wikiedits_2.12:1.9.3
+|    +--- org.apache.flink:flink-streaming-java_2.12:1.9.3
+|    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3
+|    |    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-java:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-queryable-state-client-java:1.9.3 -> 1.20.0
+|    |    |    |    +--- org.apache.flink:flink-shaded-netty:4.1.91.Final-17.0
+|    |    |    |    \--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.apache.flink:flink-hadoop-fs:1.9.3 -> 1.20.0
+|    |    |    |    \--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- commons-io:commons-io:2.4 -> 2.15.1
+|    |    |    +--- org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0 -> 4.1.91.Final-17.0
+|    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0 -> 31.1-jre-17.0
+|    |    |    +--- org.apache.flink:flink-shaded-asm-6:6.2.1-7.0
+|    |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0 -> 2.14.2-17.0
+|    |    |    +--- org.apache.commons:commons-lang3:3.3.2 -> 3.14.0
+|    |    |    +--- commons-cli:commons-cli:1.3.1 -> 1.5.0
+|    |    |    +--- org.javassist:javassist:3.19.0-GA -> 3.24.0-GA
+|    |    |    +--- org.scala-lang:scala-library:2.12.7
+|    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21
+|    |    |    |    +--- com.typesafe:config:1.3.3
+|    |    |    |    \--- org.scala-lang.modules:scala-java8-compat_2.12:0.8.0
+|    |    |    +--- com.typesafe.akka:akka-stream_2.12:2.5.21
+|    |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+|    |    |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+|    |    |    |    +--- org.reactivestreams:reactive-streams:1.0.2
+|    |    |    |    \--- com.typesafe:ssl-config-core_2.12:0.3.7
+|    |    |    |         \--- org.scala-lang.modules:scala-parser-combinators_2.12:1.1.1
+|    |    |    +--- com.typesafe.akka:akka-protobuf_2.12:2.5.21
+|    |    |    +--- com.typesafe.akka:akka-slf4j_2.12:2.5.21
+|    |    |    |    +--- com.typesafe.akka:akka-actor_2.12:2.5.21 (*)
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.36
+|    |    |    +--- org.clapper:grizzled-slf4j_2.12:1.3.2
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.36
+|    |    |    +--- com.github.scopt:scopt_2.12:3.5.0
+|    |    |    +--- org.xerial.snappy:snappy-java:1.1.4 -> 1.1.10.4
+|    |    |    +--- com.twitter:chill_2.12:0.7.6
+|    |    |    |    \--- com.twitter:chill-java:0.7.6 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-clients_2.12:1.9.3
+|    |    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+|    |    |    +--- org.apache.flink:flink-optimizer_2.12:1.9.3
+|    |    |    |    +--- org.apache.flink:flink-core:1.9.3 -> 1.20.0 (*)
+|    |    |    |    +--- org.apache.flink:flink-runtime_2.12:1.9.3 (*)
+|    |    |    |    +--- org.apache.flink:flink-java:1.9.3 -> 1.20.0 (*)
+|    |    |    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0 -> 31.1-jre-17.0
+|    |    |    |    +--- org.apache.flink:flink-shaded-jackson:2.10.1-9.0 -> 2.14.2-17.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    |    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    |    +--- org.apache.flink:flink-java:1.9.3 -> 1.20.0 (*)
+|    |    |    +--- commons-cli:commons-cli:1.3.1 -> 1.5.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    \--- org.apache.flink:force-shading:1.9.3
+|    |    +--- org.apache.flink:flink-shaded-guava:18.0-7.0 -> 31.1-jre-17.0
+|    |    +--- org.apache.commons:commons-math3:3.5 -> 3.6.1
+|    |    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    |    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    \--- org.apache.flink:force-shading:1.9.3
+|    +--- org.schwering:irclib:1.10
+|    +--- org.slf4j:slf4j-api:1.7.15 -> 1.7.36
+|    +--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    \--- org.apache.flink:force-shading:1.9.3
++--- org.apache.flink:flink-test-utils:1.20.0
+|    +--- org.apache.flink:flink-table-common:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-shaded-asm-9:9.5-17.0
+|    |    +--- com.ibm.icu:icu4j:67.1
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-test-utils-junit:1.20.0
+|    |    +--- org.junit.jupiter:junit-jupiter:5.10.1
+|    |    |    +--- org.junit:junit-bom:5.10.1
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter:5.10.1 (c)
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter-api:5.10.1 (c)
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter-engine:5.10.1 (c)
+|    |    |    |    +--- org.junit.jupiter:junit-jupiter-params:5.10.1 (c)
+|    |    |    |    +--- org.junit.platform:junit-platform-engine:1.10.1 (c)
+|    |    |    |    +--- org.junit.vintage:junit-vintage-engine:5.10.1 (c)
+|    |    |    |    \--- org.junit.platform:junit-platform-commons:1.10.1 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-api:5.10.1
+|    |    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    |    +--- org.opentest4j:opentest4j:1.3.0
+|    |    |    |    \--- org.junit.platform:junit-platform-commons:1.10.1
+|    |    |    |         \--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-params:5.10.1
+|    |    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    |    \--- org.junit.jupiter:junit-jupiter-api:5.10.1 (*)
+|    |    |    \--- org.junit.jupiter:junit-jupiter-engine:5.10.1
+|    |    |         +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |         +--- org.junit.platform:junit-platform-engine:1.10.1
+|    |    |         |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |         |    +--- org.opentest4j:opentest4j:1.3.0
+|    |    |         |    \--- org.junit.platform:junit-platform-commons:1.10.1 (*)
+|    |    |         \--- org.junit.jupiter:junit-jupiter-api:5.10.1 (*)
+|    |    +--- org.junit.vintage:junit-vintage-engine:5.10.1
+|    |    |    +--- org.junit:junit-bom:5.10.1 (*)
+|    |    |    +--- org.junit.platform:junit-platform-engine:1.10.1 (*)
+|    |    |    \--- junit:junit:4.13.2
+|    |    |         \--- org.hamcrest:hamcrest-core:1.3
+|    |    +--- org.assertj:assertj-core:3.23.1
+|    |    |    \--- net.bytebuddy:byte-buddy:1.12.10
+|    |    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.17.1
+|    |    |    +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.36
+|    |    |    +--- org.apache.logging.log4j:log4j-api:2.17.1
+|    |    |    \--- org.apache.logging.log4j:log4j-core:2.17.1
+|    |    |         \--- org.apache.logging.log4j:log4j-api:2.17.1
+|    |    +--- org.apache.logging.log4j:log4j-api:2.17.1
+|    |    +--- org.apache.logging.log4j:log4j-core:2.17.1 (*)
+|    |    +--- org.testcontainers:testcontainers:1.19.1
+|    |    |    +--- junit:junit:4.13.2 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    +--- org.apache.commons:commons-compress:1.24.0 -> 1.26.0 (*)
+|    |    |    +--- org.rnorth.duct-tape:duct-tape:1.0.8
+|    |    |    |    \--- org.jetbrains:annotations:17.0.0
+|    |    |    +--- com.github.docker-java:docker-java-api:3.3.3
+|    |    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.10.3
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.30 -> 1.7.36
+|    |    |    \--- com.github.docker-java:docker-java-transport-zerodep:3.3.3
+|    |    |         +--- com.github.docker-java:docker-java-transport:3.3.3
+|    |    |         +--- org.slf4j:slf4j-api:1.7.25 -> 1.7.36
+|    |    |         \--- net.java.dev.jna:jna:5.12.1
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-runtime:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-rpc-core:1.20.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-rpc-akka-loader:1.20.0
+|    |    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-rpc-core:1.20.0 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-queryable-state-client-java:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-hadoop-fs:1.20.0 (*)
+|    |    +--- commons-io:commons-io:2.15.1
+|    |    +--- org.apache.flink:flink-shaded-netty:4.1.91.Final-17.0
+|    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    +--- org.apache.flink:flink-shaded-jackson:2.14.2-17.0
+|    |    +--- org.apache.flink:flink-shaded-zookeeper-3:3.7.1-17.0
+|    |    +--- org.apache.commons:commons-lang3:3.12.0 -> 3.14.0
+|    |    +--- org.apache.commons:commons-text:1.10.0 (*)
+|    |    +--- commons-cli:commons-cli:1.5.0
+|    |    +--- org.javassist:javassist:3.24.0-GA
+|    |    +--- org.xerial.snappy:snappy-java:1.1.10.4
+|    |    +--- tools.profiler:async-profiler:2.9
+|    |    +--- org.lz4:lz4-java:1.8.0
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    +--- org.apache.flink:flink-rpc-akka-loader:1.20.0 (*)
+|    +--- org.apache.flink:flink-clients:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-optimizer:1.20.0
+|    |    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.apache.flink:flink-shaded-jackson:2.14.2-17.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    +--- commons-cli:commons-cli:1.5.0
+|    |    +--- org.apache.flink:flink-streaming-java:1.20.0
+|    |    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-file-sink-common:1.20.0
+|    |    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-java:1.20.0 (*)
+|    |    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.apache.commons:commons-math3:3.6.1
+|    |    |    +--- org.apache.flink:flink-connector-datagen:1.20.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.apache.flink:flink-datastream:1.20.0
+|    |    |    +--- org.apache.flink:flink-datastream-api:1.20.0
+|    |    |    |    +--- org.apache.flink:flink-core-api:1.20.0 (*)
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    |    +--- org.apache.flink:flink-streaming-java:1.20.0 (*)
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-streaming-java:1.20.0 (*)
+|    +--- org.junit.jupiter:junit-jupiter:5.10.1 (*)
+|    +--- org.assertj:assertj-core:3.23.1 (*)
+|    +--- org.apache.flink:flink-statebackend-rocksdb:1.20.0
+|    |    +--- com.ververica:frocksdbjni:6.20.3-ververica-2.0
+|    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-statebackend-changelog:1.20.0
+|    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    +--- org.apache.flink:flink-statebackend-common:1.20.0
+|    |    |    +--- org.apache.flink:flink-shaded-guava:31.1-jre-17.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.flink:flink-dstl-dfs:1.20.0
+|    |    +--- org.apache.flink:flink-core:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-runtime:1.20.0 (*)
+|    |    +--- org.apache.flink:flink-streaming-java:1.20.0 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.36
+|    |    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
+|    +--- org.apache.curator:curator-test:5.4.0
+|    |    +--- org.apache.zookeeper:zookeeper:3.7.1
+|    |    |    +--- org.apache.zookeeper:zookeeper-jute:3.7.1
+|    |    |    |    \--- org.apache.yetus:audience-annotations:0.12.0
+|    |    |    +--- org.apache.yetus:audience-annotations:0.12.0
+|    |    |    +--- io.netty:netty-handler:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-resolver:4.1.76.Final
+|    |    |    |    |    \--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final
+|    |    |    |    |    \--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-transport:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |    |    \--- io.netty:netty-resolver:4.1.76.Final (*)
+|    |    |    |    \--- io.netty:netty-codec:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |         \--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    +--- io.netty:netty-transport-native-epoll:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |    +--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    |    +--- io.netty:netty-transport-native-unix-common:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |    |    +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |    |    \--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    |    \--- io.netty:netty-transport-classes-epoll:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-common:4.1.76.Final
+|    |    |    |         +--- io.netty:netty-buffer:4.1.76.Final (*)
+|    |    |    |         +--- io.netty:netty-transport:4.1.76.Final (*)
+|    |    |    |         \--- io.netty:netty-transport-native-unix-common:4.1.76.Final (*)
+|    |    |    \--- org.slf4j:slf4j-api:1.7.35 -> 1.7.36
+|    |    +--- io.dropwizard.metrics:metrics-core:3.2.5
+|    |    +--- org.xerial.snappy:snappy-java:1.1.7 -> 1.1.10.4
+|    |    +--- com.google.guava:guava:31.1-jre
+|    |    |    +--- com.google.guava:failureaccess:1.0.1
+|    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    |    +--- org.checkerframework:checker-qual:3.12.0
+|    |    |    +--- com.google.errorprone:error_prone_annotations:2.11.0
+|    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|    |    \--- org.junit.jupiter:junit-jupiter-api:5.6.2 -> 5.10.1 (*)
+|    +--- org.slf4j:slf4j-api:1.7.36
+|    \--- com.google.code.findbugs:jsr305:1.3.9 -> 3.0.2
++--- org.junit.jupiter:junit-jupiter-api:5.8.1 -> 5.10.1 (*)
+\--- org.junit.jupiter:junit-jupiter-engine:5.8.1 -> 5.10.1 (*)
+
+testRuntimeOnly - Runtime only dependencies for source set 'test'. (n)
+\--- org.junit.jupiter:junit-jupiter-engine:5.8.1 (n)
+
+(c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
+(*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
+
+(n) - A dependency or dependency configuration that cannot be resolved.
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
