@@ -6,8 +6,6 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.core.fs.Path;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows;
-import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
 
 public class FlinkHelloWorldApp {
@@ -23,7 +21,7 @@ public class FlinkHelloWorldApp {
 
         SingleOutputStreamOperator<Tuple2<String, Integer>> dataStream = env
 //                .socketTextStream("localhost", 9999)
-                .readFile(inputFormat, filePath)
+                .<String>readFile(inputFormat, filePath)
                 .flatMap(new Splitter())
                 .keyBy(value -> value.f0)
 //                .window(TumblingProcessingTimeWindows.of(Time.seconds(5)))
