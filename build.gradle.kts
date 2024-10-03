@@ -29,9 +29,9 @@ dependencies {
     //implementation("org.slf4j:slf4j-log4j12:1.7.30") // Log4j binding for SLF4J
 
     // Table API dependencies
-//    implementation("org.apache.flink:flink-table-api-java:1.10.3") // Java Table API
-//    implementation("org.apache.flink:flink-table-api-java-bridge:1.20.0") // Required for bridging DataStream and Table
-//    implementation("org.apache.flink:flink-table-planner-loader:1.20.0") // Table planner for SQL execution
+    implementation("org.apache.flink:flink-table-api-java:1.20.0") // Java Table API
+    implementation("org.apache.flink:flink-table-api-java-bridge:1.20.0") // Required for bridging DataStream and Table
+    implementation("org.apache.flink:flink-table-planner-loader:1.20.0") // Table planner for SQL execution
 
     testImplementation("org.apache.flink:flink-test-utils:1.20.0")
 
