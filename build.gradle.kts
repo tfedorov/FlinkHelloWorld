@@ -18,7 +18,6 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.flink:flink-java:1.9.3")
 //    implementation("org.apache.flink:flink-streaming-java:1.+")
     implementation("org.apache.flink:flink-connector-wikiedits_2.12:1.9.3")
 
