@@ -19,7 +19,19 @@ repositories {
 
 dependencies {
 //    implementation("org.apache.flink:flink-streaming-java:1.+")
-    implementation("org.apache.flink:flink-connector-wikiedits_2.12:1.9.3")
+    implementation("org.apache.flink:flink-core:1.20.0")
+    implementation("org.apache.flink:flink-streaming-java:1.20.0")
+    implementation("org.apache.flink:flink-runtime:1.20.0") // For Flink runtime execution
+    implementation("org.apache.flink:flink-clients:1.20.0") // To manage Flink jobs from the client
+//    implementation("org.apache.flink:flink-connector-wikiedits_2.12:1.20.0")
+
+    // SLF4J logging
+    //implementation("org.slf4j:slf4j-log4j12:1.7.30") // Log4j binding for SLF4J
+
+    // Table API dependencies
+//    implementation("org.apache.flink:flink-table-api-java:1.10.3") // Java Table API
+//    implementation("org.apache.flink:flink-table-api-java-bridge:1.20.0") // Required for bridging DataStream and Table
+//    implementation("org.apache.flink:flink-table-planner-loader:1.20.0") // Table planner for SQL execution
 
     testImplementation("org.apache.flink:flink-test-utils:1.20.0")
 
