@@ -18,30 +18,56 @@ repositories {
 }
 
 dependencies {
-//    implementation("org.apache.flink:flink-streaming-java:1.+")
-    implementation("org.apache.flink:flink-core:1.20.0")
+    // Flink’s main streaming library that provides APIs to process data streams (e.g., DataStream API).
+    // Required for most streaming jobs.
+    // Has flink-core in transitive deps
     implementation("org.apache.flink:flink-streaming-java:1.20.0")
-    implementation("org.apache.flink:flink-runtime:1.20.0") // For Flink runtime execution
-    implementation("org.apache.flink:flink-clients:1.20.0") // To manage Flink jobs from the client
-//    implementation("org.apache.flink:flink-connector-wikiedits_2.12:1.20.0")
 
-    // SLF4J logging
-    //implementation("org.slf4j:slf4j-log4j12:1.7.30") // Log4j binding for SLF4J
+    // The runtime library contains the implementation of Flink’s runtime environment, including job execution,
+    // task scheduling, and fault tolerance. Required for Flink to execute jobs on the cluster or locally.
+    implementation("org.apache.flink:flink-runtime:1.20.0")
 
-    // Table API dependencies
-    implementation("org.apache.flink:flink-table-api-java:1.20.0") // Java Table API
-    implementation("org.apache.flink:flink-table-api-java-bridge:1.20.0") // Required for bridging DataStream and Table
+    // Provides client functionality to submit, manage, and interact with jobs from external applications.
+    // This is useful for managing Flink jobs programmatically, for example, in custom job clients.
+    //Added ExecutorFactory to execute the application.
+    implementation("org.apache.flink:flink-clients:1.20.0")
+
+    // Table API and SQL
+
+    // This library enables the use of the Table API for relational-style queries on batch and streaming data.
+    // The Table API allows higher-level, SQL-like operations to be applied on DataStreams or other Flink-supported datasets.
+    implementation("org.apache.flink:flink-table-api-java:1.20.0")
+
+    // Table Runtime: Provides runtime execution support for Table API and SQL jobs
+    implementation("org.apache.flink:flink-table-runtime:1.20.0")
+
+    // The Java bridge for converting between DataStream and Table objects.
+    // You need this if you want to convert a DataStream (e.g., coming from Kafka) into a Table and run SQL-like queries on it.
+    implementation("org.apache.flink:flink-table-api-java-bridge:1.20.0")
+
+    // Provides a planner for compiling SQL queries and Table API operations into executable Flink programs.
+    // This is necessary if you want to execute SQL queries on top of Flink's streaming or batch data.
     implementation("org.apache.flink:flink-table-planner-loader:1.20.0") // Table planner for SQL execution
 
+    // Flink Test Utilities: Provides utilities for writing unit and integration tests for Flink jobs
+    // This includes helper classes and utilities specifically designed to make testing Flink applications easier.
+    // It provides mocks, MiniCluster setup, and other necessary tools for Flink job testing.
     testImplementation("org.apache.flink:flink-test-utils:1.20.0")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")    // Adding JUnit Jupiter API for writing unit tests
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")    // Adding JUnit Jupiter Engine for running tests
+    // JUnit Jupiter API: Provides the core API for writing unit tests
+    // This is the main API for writing unit tests using JUnit 5.
+    // It provides annotations like @Test, assertions, and other testing functionalities.
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
 
+    // JUnit Jupiter Engine: The runtime engine that executes the tests written with JUnit Jupiter API
+    // This engine runs the JUnit 5 tests.
+    // Without this, the JUnit test framework would not be able to discover or execute your tests.
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
+
 application {
     // Replace this with your main class name
-    mainClass.set("com.tfedorov.FlinkHelloWorldApp")
+    mainClass.set("com.tfedorov.FlinkSQLApp")
 }
 
 

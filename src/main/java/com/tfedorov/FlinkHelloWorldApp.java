@@ -15,9 +15,7 @@ public class FlinkHelloWorldApp {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         String filePath = "/Users/tfedorov/IdeaProjects/FlinkHelloWorld/src/main/resources/files2read/test.csv";
-        TextInputFormat inputFormat = new TextInputFormat(new Path(filePath)
-                // Path to the file
-        );
+        TextInputFormat inputFormat = new TextInputFormat(new Path(filePath));
 
         SingleOutputStreamOperator<Tuple2<String, Integer>> dataStream = env
 //                .socketTextStream("localhost", 9999)
