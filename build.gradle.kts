@@ -15,6 +15,9 @@ plugins {
 repositories {
     // Maven Central Repository
     mavenCentral()
+    maven {
+        url = uri("https://repo.maven.apache.org/maven2")
+    }
 }
 
 dependencies {
@@ -63,6 +66,12 @@ dependencies {
     // This engine runs the JUnit 5 tests.
     // Without this, the JUnit test framework would not be able to discover or execute your tests.
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+
+
+//    implementation("org.apache.flink:flink-connector-filesystem:0.10.2")
+    implementation("org.apache.flink:flink-connector-files:1.20.0")
+    implementation("org.apache.flink:flink-csv:1.20.0")             // CSV format
+
 }
 
 application {
