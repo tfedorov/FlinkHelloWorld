@@ -8,3 +8,5 @@ build
 /FlinkHelloWorld.ipr
 /FlinkHelloWorld.iml
 /out/
+/FlinkHelloWorld.test.iml
+/FlinkHelloWorld.main.iml
