@@ -70,6 +70,7 @@ dependencies {
 
 //    implementation("org.apache.flink:flink-connector-filesystem:0.10.2")
     implementation("org.apache.flink:flink-connector-files:1.20.0")
+    //implementation("org.apache.flink:flink-connector-hive_2.12:1.+")
     implementation("org.apache.flink:flink-csv:1.20.0")             // CSV format
 
 }
