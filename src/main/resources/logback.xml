@@ -1,7 +1,7 @@
 <configuration>
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -10,6 +10,10 @@
     </root>
 
     <logger name="com.tfedorov" level="info" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="org.apache.flink" level="warn" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 </configuration>
