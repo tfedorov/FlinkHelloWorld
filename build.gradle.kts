@@ -73,6 +73,11 @@ dependencies {
     //implementation("org.apache.flink:flink-connector-hive_2.12:1.+")
     implementation("org.apache.flink:flink-csv:1.20.0")             // CSV format
 
+    implementation("org.slf4j:slf4j-api:2.0.9") // SLF4J API
+    implementation("ch.qos.logback:logback-classic:1.4.11") // Logback implementation
+    implementation("ch.qos.logback:logback-core:1.4.11") // Logback core
+
+
 }
 
 application {

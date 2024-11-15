@@ -7,8 +7,12 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FlinkSQLApp {
+    private static final Logger logger = LoggerFactory.getLogger(FlinkSQLApp.class);
+
 
     public static StreamExecutionEnvironment getEnv() {
         Configuration config = new Configuration();
@@ -32,12 +36,14 @@ public class FlinkSQLApp {
         return StreamTableEnvironment.create(env, settings);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+
+        logger.info("FlinkSQLApp started");
 
         StreamExecutionEnvironment env = getEnv();
         StreamTableEnvironment tableEnv = createTableEnv(env);
         //DDL
-        tableEnv.executeSql("CREATE TABLE resultSink (word STRING, counted BIGINT) WITH ( 'connector' = 'filesystem', 'path' = 'file:///Users/tfedorov/IdeaProjects/FlinkHelloWorld/src/main/resources/out', 'format' = 'csv')"); // Fill in your sink configuration
+        tableEnv.executeSql("CREATE TABLE resultSink (word STRING, counted BIGINT) WITH ( 'connector' = 'filesystem', 'path' = 'file:///Users/tfedorov/IdeaProject/private/FlinkHelloWorld/src/main/resources/out', 'format' = 'csv')"); // Fill in your sink configuration
 
         DataStreamSource<String> inputDataStream = env.socketTextStream("localhost", 9999);
         // Convert DataStream to Table
