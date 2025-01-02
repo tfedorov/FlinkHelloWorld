@@ -41,6 +41,8 @@ dependencies {
     // The Table API allows higher-level, SQL-like operations to be applied on DataStreams or other Flink-supported datasets.
     implementation("org.apache.flink:flink-table-api-java:1.20.0")
 
+    implementation("org.apache.flink:flink-connector-kafka:3.4.0-1.20")
+
     // Table Runtime: Provides runtime execution support for Table API and SQL jobs
     implementation("org.apache.flink:flink-table-runtime:1.20.0")
 
@@ -82,7 +84,7 @@ dependencies {
 
 application {
     // Replace this with your main class name
-    mainClass.set("com.tfedorov.FlinkSQLApp")
+    mainClass.set("com.tfedorov.FlinkKafkaApp")
 }
 
 

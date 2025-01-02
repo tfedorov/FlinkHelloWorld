@@ -10,3 +10,4 @@ build
 /out/
 /FlinkHelloWorld.test.iml
 /FlinkHelloWorld.main.iml
+/src/main/resources/out/*
