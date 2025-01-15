@@ -39,7 +39,7 @@ docker exec -it kafka kafka-topics.sh --create --topic flink-kafka-topic --boots
 - Verification: Ensure the application is running by checking the output. You should see logs indicating that the Flink job has started
 5. **Send Data to the Socket**:
 ```bash
-nc localhost 9999
+nc -l 9999
 ```
 - Type some words and press Enter.
 
